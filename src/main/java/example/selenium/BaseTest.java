@@ -18,7 +18,12 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
         //nodeUrl = "http://10.61.202.161:4444";
         baseUrl = "https://rahulshettyacademy.com/angularpractice/";
         //dc = new DesiredCapabilities();
@@ -27,12 +32,11 @@ public class BaseTest {
 
         //driver = new RemoteWebDriver(new URL(nodeUrl), dc);
         //WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+
         //options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         //options.setExperimentalOption("useAutomationExtension", false);
-        driver = new ChromeDriver();
         driver.get(baseUrl);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
