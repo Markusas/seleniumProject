@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
@@ -15,7 +15,7 @@ public class BaseTest {
 
     //String nodeUrl;
 
-    @BeforeSuite
+    @BeforeMethod
     public void setUp() {
 
         //nodeUrl = "http://10.61.202.161:4444";
