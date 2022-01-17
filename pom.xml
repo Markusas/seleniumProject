@@ -14,11 +14,11 @@
             <artifactId>selenium-java</artifactId>
             <version>4.1.1</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
