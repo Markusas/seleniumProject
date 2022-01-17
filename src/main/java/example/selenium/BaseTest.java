@@ -28,10 +28,10 @@ public class BaseTest {
         //driver = new RemoteWebDriver(new URL(nodeUrl), dc);
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.setExperimentalOption("useAutomationExtension", false);
+        //options.addArguments("--disable-dev-shm-usage");
+        //options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver();
         driver.get(baseUrl);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
