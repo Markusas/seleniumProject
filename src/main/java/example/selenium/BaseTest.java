@@ -26,10 +26,10 @@ public class BaseTest {
         //dc.setPlatform(Platform.WINDOWS);
 
         //driver = new RemoteWebDriver(new URL(nodeUrl), dc);
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver();
